@@ -15,7 +15,37 @@ public class JDBC_Query02 {
 
         String query = "SELECT * FROM wonderworld_qa2.staff";
 
-         i t e r a t o r
+        ResultSet resultSet = statement.executeQuery(query);
+
+        resultSet.next();
+        System.out.println(resultSet.getString("name"));
+        //Joe
+
+        resultSet.next();
+        System.out.println(resultSet.getString("name"));
+        //Joe
+        //Shivam
+
+        resultSet.absolute(5);
+        System.out.println(resultSet.getNString("name"));
+        //Joe
+        //Shivam
+        //Jason
+
+        resultSet.absolute(6);
+        System.out.println(resultSet.getNString("surname"));
+        //Joe
+        //Shivam
+        //Jason
+        //Deckar
+
+        resultSet.first();
+        System.out.println(resultSet.getNString("surname"));
+        //Joe
+        //Shivam
+        //Jason
+        //Deckar
+        //Black
 
     }
 }
